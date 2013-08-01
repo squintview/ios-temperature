@@ -8,16 +8,17 @@
 
 #import <UIKit/UIKit.h>
 
+typedef enum  {
+    C2F,
+    F2C
+} ConversionType;
 @interface ConverterViewController : UIViewController<UITextFieldDelegate>
 
 @property (nonatomic, strong) IBOutlet UITextField *fahrenheit;
 @property (nonatomic, strong) IBOutlet UITextField *celsius;
 @property (nonatomic, strong) IBOutlet UIButton *convert;
--(IBAction)convertTemperatureWithSender:(id)sender;
 
-typedef enum  {
-    C2F,
-    F2C
-} ConversionType;
+
 @property (nonatomic) ConversionType ctype;
+-(IBAction)convertTemperatureWithSender:(id)sender;
 @end
